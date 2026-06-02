@@ -1,0 +1,38 @@
+<diagram program="umletino" version="15.1"><zoom_level>12</zoom_level><help_text>Space for diagram notes</help_text><element><id>UMLClass</id><coordinates><x>12</x><y>84</y><w>396</w><h>396</h></coordinates><panel_attributes>fg=white
+bg=#871F78
+Libro
+--
+-isbn: String
+-titulo: String
+-autor: String
+-anio: int
+-disponible: boolean
+-numPaginas: int
+-_totalLibros: int_
+--
++Libro(String, String, String, int, int)&lt;&lt;Constructor&gt;&gt;
++Libro( String, String, String)
++getIsbn(): String
++getTitulo(): String
++getAutor(): String
++getAnio(): int
++isDisponible(): boolean
++getNumPaginas(): int
++_getTotalLibros(): int_
++setAnio(anio: int): void
++prestar(): void
++devolver(): void
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>588</x><y>204</y><w>360</w><h>180</h></coordinates><panel_attributes>bg=blue
+fg=white
+Catalogo
+--
+-libros: ArrayList&lt;Libro&gt;
+--
++Catalogo()&lt;&lt;Constructor&gt;&gt;
++agregarLibro(): void
++buscarPorIsbn(): Libro
++buscarPorAutor(): ArrayList&lt;Libro&gt;
++listarDisponibles(): ArrayList&lt;Libro&gt;
++contarDisponibles(): int
++toString(): String</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>396</x><y>276</y><w>216</w><h>48</h></coordinates><panel_attributes>lt=&lt;&lt;&lt;&lt;-
+0..*                          1</panel_attributes><additional_attributes>160;20;10;20</additional_attributes></element></diagram>
